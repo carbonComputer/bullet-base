@@ -1,0 +1,2 @@
+class FormRequest < ApplicationRecord
+end
