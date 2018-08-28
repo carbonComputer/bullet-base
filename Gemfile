@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'activerecord-import'
+# gem 'activerecord-import'
 gem 'pry-rails', '0.3.6'
 gem 'pry-nav', '0.2.4'
 gem 'pry-remote', '0.1.8'

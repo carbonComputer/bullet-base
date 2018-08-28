@@ -6,7 +6,7 @@ Rails.application.configure do
     Bullet.raise = true
     Bullet.bullet_logger = true
     Bullet.rails_logger = true
-    p 'setup worksxx'
+    Bullet.unused_eager_loading_enable = false
   end
 
   # The test environment is used exclusively to run your application's
