@@ -1,6 +1,14 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.raise = true
+    Bullet.bullet_logger = true
+    Bullet.rails_logger = true
+    p 'setup worksxx'
+  end
+
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
@@ -38,14 +46,6 @@ Rails.application.configure do
   config.active_support.deprecation = :stderr
 
 
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.raise = true
-    Bullet.bullet_logger = true
-    Bullet.rails_logger = true
-    Bullet.unused_eager_loading_enable = false
-    Bullet.counter_cache_enable = false
-  end
 
 
   # Raises error for missing translations

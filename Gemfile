@@ -1,11 +1,17 @@
 source 'https://rubygems.org'
 
+ruby '2.4.3'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'bullet'
+gem 'activerecord-import'
+gem 'pry-rails', '0.3.6'
+gem 'pry-nav', '0.2.4'
+gem 'pry-remote', '0.1.8'
+gem 'pg'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
@@ -40,6 +46,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  gem 'bullet'
+  gem 'rspec-rails'
 end
 
 group :development do
